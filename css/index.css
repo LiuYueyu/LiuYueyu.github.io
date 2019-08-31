@@ -1,5 +1,6 @@
 body {
-	background-color: #ffffff;
+	background-color: #021509;
+	color: white;
 }
 
 
@@ -18,5 +19,7 @@ aside {
 }
 
 footer {
+	position: relative;
+	top: 20em;
 	text-align: center;
 }
