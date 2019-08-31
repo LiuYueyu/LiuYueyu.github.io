@@ -1,0 +1,22 @@
+body {
+	background-color: #ffffff;
+}
+
+
+#h1-1 {
+	font-size: 32px;
+	text-align: center;
+}
+
+#h1-2{
+	font-size: 24px;
+	text-align: center;
+}
+
+aside {
+	text-indent: 64em;
+}
+
+footer {
+	text-align: center;
+}
