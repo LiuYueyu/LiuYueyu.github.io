@@ -1,7 +1,10 @@
 html {
 	text-align: center;
 }
-
+body {
+	background: #000024;
+	color: #ffffff
+}
 main {
 	font-size: 32px;
 }

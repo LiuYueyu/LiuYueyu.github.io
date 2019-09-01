@@ -1,8 +1,10 @@
 body {
-	background-color: #021509;
-	color: white;
+	background-color: #636363;
+	color: #ffffff;
 }
-
+li {
+	color: #ffffff;
+}
 
 #h1-1 {
 	font-size: 32px;
@@ -16,6 +18,12 @@ body {
 
 aside {
 	text-indent: 64em;
+}
+
+main {
+	position: relative;
+	top: 7em;
+	text-align: center;
 }
 
 footer {
