@@ -1,21 +1,40 @@
-html {
+body {
+	background: #000024;
+	color: #ffffff	
+}
+
+header {
+	box-sizing: border-box;
+	font-size: 36px;
 	text-align: center;
 }
 
-body {
-	background: #000024;
-	color: #ffffff
+main{
+	text-align: center;
 }
 
-main {
+footer {
+	text-align: center;
+}
+
+.quote {
+	position: relative;
+	right: 12em;	
+	text-align: right;
+	font-size: 16px;
+	color: #0000ff;
+}
+.selfintro{
 	font-size: 24px;
 }
-
-h1{
+.contactinfo {
+	font-size: 18px;
+	color: #999999;
+}
+.headline{
 	font-family: "楷体";	
 }
-
-a {
+.alink {
 	color: white;
 	text-decoration: none; 
 }
