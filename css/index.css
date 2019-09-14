@@ -3,33 +3,8 @@ body {
 	color: #ffffff;	
 }
 
-.slect-list li{
-	display: inline;
-}
-
-.h_text {
-	font-size: 32px;
-	text-align: center;
-	font-family: "楷体";
-}
-
-nav {
+header {
 	text-align: right;
-}
-
-.navi{
-	color: white;
-	text-decoration: none; 
-}
-
-
-#h1-4{
-	font-size: 32px;
-	text-align: right;
-}
-
-aside {
-	text-indent: 64em;
 }
 
 main {
@@ -38,8 +13,34 @@ main {
 	text-align: center;
 }
 
+aside {
+	
+}
+
 footer {
 	position: relative;
 	top: 16em;
 	text-align: center;
 }
+
+
+.navi-list li{
+	display: inline;
+}
+.alink{
+	text-decoration: none; 
+	color: #ffffff;
+}
+.quote {
+	font-size: 32px;
+	text-align: center;
+	font-family: "楷体";
+}
+.cite-src{
+	font-size: 32px;
+	text-align: right;
+	font-family: "楷体";
+}
+
+
+
