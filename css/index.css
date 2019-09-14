@@ -3,23 +3,28 @@ body {
 	color: #ffffff;	
 }
 
-#h1-1 {
-	font-size: 24px;
-	text-align: center;
+.slect-list li{
+	display: inline;
 }
 
-#h1-2{
-	font-size: 24px;
+.h_text {
+	font-size: 32px;
 	text-align: center;
+	font-family: "楷体";
 }
 
-#h1-3{
-	font-size: 24px;
-	text-align: center;
+nav {
+	text-align: right;
 }
+
+.navi{
+	color: white;
+	text-decoration: none; 
+}
+
 
 #h1-4{
-	font-size: 24px;
+	font-size: 32px;
 	text-align: right;
 }
 
@@ -35,6 +40,6 @@ main {
 
 footer {
 	position: relative;
-	top: 20em;
+	top: 16em;
 	text-align: center;
 }
