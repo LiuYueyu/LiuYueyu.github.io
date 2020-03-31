@@ -3,6 +3,7 @@ body {
 	color: #ffffff;	
 }
 
+
 .whole{
 	
 }
@@ -17,6 +18,22 @@ header {
     width: 80%;
     height: 100px;
     margin: 0 auto;
+}
+
+.top_button {
+    float: left;
+    margin-right: 20px;
+    margin-top: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 20px;
+}
+
+.navi{
+	font-size: 32px;
+	color: white;
+	text-decoration: none;	
+	font-family: "楷体";
 }
 
 main {
