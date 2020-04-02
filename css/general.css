@@ -8,7 +8,7 @@ body {
 	background-color: #636363;
 	position: relative; 
 	width: 80%; 
-	height: 100em; 
+	/* height: 100em;  */
 	margin: auto;
 }
 
@@ -48,7 +48,7 @@ header {
 }
 
 main {
-	background-color: #636363;
+	background-color: #555555;
 	position: relative;
     width: 80%;
     height: 60%;
@@ -61,7 +61,7 @@ aside {
 }
 
 footer {
-	background-color: #636363;
+	background-color: #555555;
 	position: relative;
     width: 80%;
     height: 20%;
