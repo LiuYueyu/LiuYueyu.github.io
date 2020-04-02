@@ -1,5 +1,5 @@
 body {
-	background-color: #636363;
+	background-color: #ffffff;
 	color: #ffffff;	
 }
 
@@ -9,12 +9,13 @@ body {
 }
 
 header {
+	background-color: #636363;
 	text-align: left;
 	color: #ffffff;
 	position: relative;
     width: 80%;
-    height: 100px;
-    margin: 0 auto;
+    height: 20%;
+    margin: auto;
 }
 
 .top_navi {
@@ -41,8 +42,11 @@ header {
 }
 
 main {
+	background-color: #636363;
 	position: relative;
-	top: 7em;
+    width: 80%;
+    height: 60%;
+    margin: auto;
 	text-align: center;
 }
 
@@ -51,8 +55,11 @@ aside {
 }
 
 footer {
+	background-color: #636363;
 	position: relative;
-	top: 16em;
+    width: 80%;
+    height: 20%;
+    margin: auto;
 	text-align: center;
 }
 

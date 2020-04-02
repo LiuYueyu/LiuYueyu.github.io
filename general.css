@@ -1,9 +1,28 @@
-body {}
+body {
+	background-color: #ffffff;
+}
 
-header{}
+header{
+	background-color: #636363;
+	position: relative;
+	margin: auto;
+	width: 80%;
+}
 
-main{}
+main{
+	background-color: #636363;
+	position: relative;
+	margin: auto;
+	width: 80%;
+}
 
-aside{}
+aside{
+	
+}
 
-footer{}
+footer{
+	background-color: #636363;
+	position: relative;
+	margin: auto;
+	width: 80%;
+}
