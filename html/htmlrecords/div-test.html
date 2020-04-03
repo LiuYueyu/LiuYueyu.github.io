@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>div实现布局</title> 
+</head>
+<body>
+	<div id="container" style="width:80%;margin:auto">
+		<div id="header" style="background-color:#FFA500;text-align:center;">
+		<h1 style="margin-bottom:0;">2020-04-01</h1>
+		</div>
+		
+		<div>
+			<div id="menu" style="width:10%;height:1000px;background-color:#FFD700;float:left;">
+			<a href="1stday.html">2020-04-01</a><br /><br />
+			<a href="2ndday.html">2020-04-02</a><br /><br />
+			<a href="3rdday.html">2020-04-03</a><br /><br />
+			</div>
+			
+			<div id="content" style="width:90%;height:1000px;background-color:#EEEEEE;float:left;overflow:scroll;">
+			<h2>教程</h2>
+			后缀“<strong><em>html</em></strong>”和“<strong><em>htm</em></strong>”没有区别，推荐使用“<strong><em>html</em></strong>”。<br />
+			“<strong><em>&lt;meta charset="utf-8"&gt;</em></strong>”用在中文网页声明编码。<br />
+			<hr />
+			
+			<h2>简介</h2>
+			“<strong><em>&lt;!DOCTYPE html&gt;</em></strong>”声明为HTML5文档。<br />
+			HTML指超文本标记语言：HyperTextMarkupLanguage。<br />
+			HTML标签通常成对出现，称为<strong>开始标签（或开放标签）</strong>和<strong>结束标签（或闭合标签）</strong>。<br />
+			<hr />
+			
+			<h2>基础-四个实例</h2>
+			HTML标题：“<strong><em>&lt;h1-h6&gt;</em></strong>”<br />
+			HTML段落：“<strong><em>&lt;p&gt;</em></strong>”<br />
+			HTML链接：“<strong><em>&lt;a&gt;</em></strong>”<br />
+			HTML图像：“<strong><em>&lt;img&gt;</em></strong>”<br />
+			<hr />
+			
+			<h2>元素</h2>
+			HTML文档由HTML元素定义。<br />
+			元素的内容是开始标签与结束标签之间的内容，但大多数浏览器也会正确显示无结束标签的元素。<br />
+			没有内容的HTML元素被称为<strong>空元素</strong>，空元素是在开始标签中关闭的。如"<strong><em>&lt;br /&gt;</em></strong>"--换行，推荐使用“<strong><em>&lt;br /&gt;</em></strong>”形式。<br />
+			大多数HTML元素可拥有<strong>属性</strong>。<br />
+			HTML标签对大小写不敏感，推荐使用<strong>小写</strong>。<br />
+			<hr />
+			
+			<h2>属性</h2>
+			属性是HTML元素提供的附加信息。<br />
+			属性一般描述于<strong>开始标签</strong>。<br />
+			属性总是以<strong>名称/值</strong>对的形式出现。<br />
+			属性值总是被包括在引号内，常用<strong>双引号</strong>，但属性值本身就含有双引号时，必须使用<strong>单引号</strong>。<br />
+			适用于大多数HTML元素的属性：<br />
+			<strong><em>class：</em></strong>为HTML元素定义一个类名或多个类名；<br />
+			<strong><em>id：</em></strong>定义元素的唯一ID；<br />
+			<strong><em>style：</em></strong>规定元素的行内样式；<br />
+			<strong><em>title：</em></strong>描述了元素的额外信息（作为工具条使用）。<br />
+			<hr />
+			
+			<h2>标题</h2>
+			标题通过“<strong><em>&lt;h1-h6&gt;</em></strong>”标签进行定义。<br />
+			浏览器会自动在标题前后添加<strong><em>空行</em></strong>。<br />
+			标题标签只用于标题，不要仅仅为了粗体和大写的文本而使用标题标签。<br />
+			<strong><em>&lt;hr /&gt;</em></strong>标签在HTML页面中创建水平线，可用于分隔内容。<br />
+			<strong><em>"&lt;!--这是一个注释--&gt;"</em></strong><br />
+			<hr />
+			
+			<h2>段落</h2>
+			浏览器会自动在段落的前后添加空行。<br />
+			<strong><em>&lt;br /&gt;</em></strong>标签可以在不产生新段落的情况下换行。<br />
+			无法通过在HTML代码中添加额外的空格或换行来改变输出的效果，所有的空格或空行都会被算作一个空格。<br />
+			<hr />
+			
+			<h2>文本格式化<a href="../formatlabel.html" target="_blank">more</a></h2>
+			标签<strong><em>“&lt;b(bold)&gt;” </em></strong> 和 <strong><em>“&lt;i(italic)&gt;” </em></strong>定义粗体和斜体。<br />
+			通常可以用标签<strong><em>“&lt;strong&gt;” </em></strong> 和 <strong><em>“&lt;em&gt;” </em></strong>替代，但其含义不同，后者为突出显示重要文本。<br />
+			<hr />
+			
+			<h2>链接</h2>
+			在标签<strong><em>“&lt;a&gt;” </em></strong> 中使用<strong><em>“href” </em></strong> 属性来描述链接的地址。<br />
+			点击链接内容可以跳转到新的文档或者当前文档中的某个部分。<br />
+			默认情况下，链接将以以下形式出现在浏览器中：<br />
+			1 一个未访问过的链接显示为蓝色字体并带有下划线。<br />
+			2 访问过的链接显示为紫色并带有下划线。<br />
+			3 点击链接时，链接显示为红色并带有下划线。<br />
+			使用<strong><em>“target” </em></strong>属性，可以定义被链接的文档在何处显示，<strong><em>“_blank” </em></strong>会在新窗口打开网页。<br />
+			id属性可用于创建在一个HTML文档书签标记，书签不以任何特殊的方式显示，对于读者来说是隐藏的。<br />
+			可用<strong><em>“href=#id” </em></strong>的形式访问书签。<br />
+			<hr />
+			</div>
+			
+		</div>
+		
+		<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+		&copy六月雨
+		</div>
+
+	</div>
+	
+</body>
+</html>
