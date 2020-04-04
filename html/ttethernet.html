@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8"> 
+<title>时间触发以太网</title> 
+</head>
+<body>
+	<div id="container" style="width:80%;margin:auto">
+		<div style="background-color:#636363">
+			<div id="previous_page" style="background-color:#000000;float:left">
+				<a class="alink" href="spread-spectrum.html">上一篇</a>
+			</div>
+			
+			<div id="next_page" style="background-color:#000000;float:right">
+				<a class="alink" href="learning.html">下一篇</a>
+			</div>
+			
+		</div>
+		
+		<div id="header" style="background-color:#FFA500;text-align:center;">
+			<h1 style="margin-bottom:0;">时间触发以太网文献</h1>
+		</div>
+		
+		<div>
+			<div id="menu" style="width:10%;height:1000px;background-color:#FFD700;float:left;">
+				<a class="alink" href="#luoanxin">罗安心</a><br /><br />
+				<a class="alink" href="#lizhenwei">李振伟</a><br /><br />
+				<a class="alink" href="#guoaiying">郭爱英</a><br /><br />
+				<a class="alink" href="#luoyong">罗勇</a><br /><br />
+				<a class="alink" href="#gaopengfei">高鹏飞</a><br /><br />
+				<a class="alink" href="#wushaokang">吴少康</a><br /><br />
+				<a class="alink" href="#dingpeili">丁培丽</a><br /><br />
+				<a class="alink" href="#zhaojunlong">赵俊龙</a><br /><br />
+			</div>
+			
+			<div id="content" style="width:90%;height:1000px;background-color:#EEEEEE;float:left;overflow:scroll;">
+				<h1 id="luoanxin">基于时间触发以太网的同步算法研究与实现</h1>
+				<p>设计了终端节点模型和交换机模型；<br />
+				在OPNET仿真工具上进行模型功能性测试；<br />
+				设计同步算法并在单通道和双通道网络拓扑中验证其有效性；<br />
+				测量同步精度达10ns（单）和100ns（双）。</p>
+				
+				<h1 id="lizhenwei">基于网络演算的时间触发以太网的研究</h1>
+				<p>用网络演算对单通道和双通道拓扑的TTE性能进行分析；<br />
+				设计TTE网络节点模型，仿真分析其网络性能。</p>
+				
+				<h1 id="guoaiying">时间触发以太网网络同步技术的研究与实现</h1>
+				<p>对AS6892协议和IEEE1588标准做了适当融合；<br />
+				支持1588的硬件底层功能，实现AS6802的时钟相位与频率同步算法；<br />
+				设计了时间同步模块的实现方案并对其进行仿真验证。</p>
+				
+				<h1 id="luoyong">时间触发以太网关键技术的研究</h1>
+				<p>基于FPGA的时间同步模块设计；<br />
+				精确测量透明时钟的方法，可动态测量相邻节点的传输实验；<br />
+				基于航电网络提出两种网络的调度算法：<br />
+				a.直接转发：适于小型网络且固定
+				b.存储转发：大型静态航电TTE网络
+				
+				<h1 id="gaopengfei">时间触发以太网交换机设计</h1>
+				<p>介绍了时间触发以太网的技术内容；<br />
+				针对典型双冗余星形 TTE 网络的设计。</p>
+				
+				<h1 id="wushaokang">面向航天器的时间触发以太网关键技术研究</h1>
+				<p>多次执行LCS算法，计算dealy和offset平均值，更可靠的精度；<br />
+				引入置信度作为时间同步结果可信度的标识；<br />
+				以抖动大小确定同步等级，即执行LCS算法的次数；<br />
+				自适应QoS优先级调度算法，动态调整令牌阵列；<br />
+				动态适应不同优先级报文的实际情况，调整响应的限速速率。</p>
+				
+				<h1 id="dingpeili">时间触发以太网关键技术研究与核心模块设计</h1>
+				<p>在OMNTE++仿真平台实现TTE数据传输机制建模；<br />
+				设计了一种基于粒子群模拟退火算法(SA-PSO)的静态调度算法；<br />
+				将各种限制条件（竞争自由约束、中断有效约束、应用场景约束）转化为适应度函数；<br />
+				定义损失函数作为种群迁移的依据。</p>
+				
+				<h1 id="zhaojunlong">时间触发以太网综合业务调度算法与管控平台研究</h1>
+				<p>基于集中式管理思想提出时间触发综合管控系统。<br />
+				总体架构：网元层、管控层、应用层</p>
+				<table border="1">
+					<tr>
+						<td colspan="2" style="text-align:center">
+						问题</td>
+					</tr>
+					<tr>
+						<td>管控协议</td>
+						<td>连接模式，三要素</td>
+					</tr>
+					<tr>
+						<td>管控中心</td>
+						<td>大规模，横向功能扩展，API化</td>
+					</tr>
+					<tr>
+						<td>管控代理</td>
+						<td>管理协议支持，网元设备配置</td>
+					</tr>
+				</table>
+				<p>对TTE综合业务调度问题进行建模，提出一种两阶段多业务调度算法：<br />
+				(1)数据传输路径：最小化最大链路带宽利用率，K短路算法和遗传算法思想；<br />
+				(2)节点调度规则：贪心算法思想，带失败处理（迭代设置业务优先级）。</p>				
+			</div>
+			
+		</div>
+		
+		<div id="footer" style="background-color:#FFA500;clear:both;text-align:center;">
+			&copy六月雨
+		</div>
+
+	</div>
+	
+</body>
+</html>
