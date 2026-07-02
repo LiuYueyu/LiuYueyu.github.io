@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>星座网络运行状态监控平台</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-logo">◆</div>
+        <div class="brand-text">XPU</div>
+      </div>
+      <div class="title-wrap">
+        <div class="title-glow"></div>
+        <h1>星座网络运行状态监控平台</h1>
+      </div>
+      <div class="top-actions">
+        <span id="clock">--</span>
+        <span class="icon-dot">◉</span>
+        <span>admin</span>
+        <span class="icon-dot">⌁</span>
+        <span class="icon-dot">⚙</span>
+        <span class="icon-dot">⛶</span>
+      </div>
+    </header>
+
+    <main class="dashboard">
+      <aside class="left-panel glass">
+        <div class="panel-title">输入控制</div>
+        <section class="control-card">
+          <div class="control-grid">
+            <label class="wide"><span>星座构型</span><select id="constellationType">
+              <option value="walker" selected>Walker</option>
+              <option value="polar">Polar 极轨</option>
+              <option value="sunsync">Sun-synchronous 太阳同步</option>
+              <option value="rosette">Rosette 玫瑰构型</option>
+              <option value="mesh">Mesh 网格构型</option>
+            </select></label>
+            <label><span>轨道数</span><input id="orbitCount" type="number" min="1" max="120" value="50" /></label>
+            <label><span>每轨卫星数</span><input id="satsPerOrbit" type="number" min="1" max="120" value="20" /></label>
+            <label><span>相位因子</span><input id="phaseFactor" type="number" min="0" max="20" value="1" /></label>
+            <label><span>轨道高度</span><input id="orbitAltitude" type="number" min="200" max="36000" step="10" value="520" /></label>
+            <label><span>轨道倾角</span><input id="orbitInclination" type="number" min="0" max="180" step="1" value="70" /></label>
+            <label><span>观察视角</span><select id="viewMode">
+              <option value="north" selected>北极</option>
+              <option value="south">南极</option>
+              <option value="custom">自定义</option>
+            </select></label>
+            <div class="custom-view hidden wide" id="customView">
+              <label><span>纬度</span><input id="customLat" type="number" min="-90" max="90" value="30" /></label>
+              <label><span>经度</span><input id="customLon" type="number" min="-180" max="180" value="110" /></label>
+            </div>
+            <button id="applyBtn" class="primary-btn wide">应用配置</button>
+          </div>
+        </section>
+
+        <section class="legend-box">
+          <h3>图例</h3>
+          <div><i class="line orbit"></i>轨道路径</div>
+          <div><i class="line inter"></i>星间链路</div>
+          <div><i class="line cross"></i>跨轨链路</div>
+          <div><i class="line ground"></i>地面链路</div>
+        </section>
+
+        <section class="legend-box">
+          <h3>图层显示</h3>
+          <label><input type="checkbox" data-layer="satellite" checked />卫星节点</label>
+          <label><input type="checkbox" data-layer="orbit" checked />轨道路径</label>
+          <label><input type="checkbox" data-layer="inter" checked />星间链路</label>
+          <label><input type="checkbox" data-layer="ground" checked />地面站</label>
+          <label><input type="checkbox" data-layer="label" checked />节点标识</label>
+        </section>
+
+        <section class="mini-system"><div class="mini-screen"><span></span><span></span><span></span><span></span></div></section>
+      </aside>
+
+      <section class="center-panel">
+        <div class="runtime-strip">
+          <div class="runtime-item"><div class="runtime-icon">◷</div><div><span>网络时间</span><strong id="netTime">--</strong></div></div>
+          <div class="runtime-item"><div class="runtime-icon">≋</div><div><span>运行时长</span><strong id="runTime">12天 04:32:18</strong></div></div>
+          <div class="runtime-item ok"><div class="runtime-icon">▶</div><div><span>仿真状态</span><strong>运行中</strong></div></div>
+        </div>
+
+        <div class="space-stage glass">
+          <div class="corner c-lt"></div><div class="corner c-rt"></div><div class="corner c-lb"></div><div class="corner c-rb"></div>
+          <canvas id="spaceCanvas"></canvas>
+          <div id="satTooltip" class="tooltip hidden"></div>
+          <div class="drag-tip">拖拽旋转视角</div>
+        </div>
+
+        <div class="bottom-panels">
+          <article class="metric-panel glass"><h3>卫星状态分布</h3><div class="donut-row"><canvas id="statusDonut"></canvas><div id="statusLegend" class="chart-legend"></div></div></article>
+          <article class="metric-panel glass"><h3>链路吞吐趋势（近24小时）</h3><canvas id="linkTrend"></canvas></article>
+          <article class="metric-panel glass"><h3>告警趋势（近24小时）</h3><canvas id="alarmTrend"></canvas></article>
+        </div>
+      </section>
+
+      <aside class="right-panel glass">
+        <div class="switch-bar">
+          <button id="globalBtn" class="active">全局信息</button>
+          <button id="singleBtn">单星信息</button>
+          <div class="sat-select-wrap"><span>卫星选择</span><select id="satelliteSelect"></select></div>
+        </div>
+
+        <div id="globalView" class="info-view active">
+          <section class="right-section"><h2>全局概览</h2><div id="globalCards" class="global-cards"></div></section>
+          <section class="right-section"><h2>网络状态</h2><div id="networkStatus" class="status-grid"></div></section>
+          <section class="right-section flex-section"><h2>链路状态（TOP 5）</h2><table id="linkTable" class="data-table"></table></section>
+          <section class="right-section"><h2>资源状态</h2><div id="resourceRings" class="rings"></div></section>
+          <section class="right-section flex-section"><h2>最新告警（TOP 5）</h2><table id="alarmTable" class="data-table"></table></section>
+        </div>
+
+        <div id="singleView" class="info-view">
+          <section class="right-section"><h2 id="singleTitle">单星信息</h2><div id="singleSummary" class="single-summary"></div></section>
+          <section class="right-section"><h2>单星资源状态</h2><div id="singleRings" class="rings"></div></section>
+          <section class="right-section flex-section"><h2>星间 / 星地链路</h2><table id="singleLinkTable" class="data-table"></table></section>
+          <section class="right-section flex-section"><h2>当前业务与告警</h2><table id="singleServiceTable" class="data-table"></table></section>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <span>数据更新间隔：10秒</span><span>平台版本：V2.6.1</span><span>数据源：仿真引擎</span><span>校时模式：已同步</span><span>© 2026 XPU Aerospace Systems</span>
+    </footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
